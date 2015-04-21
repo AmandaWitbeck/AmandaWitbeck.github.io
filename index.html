@@ -2,20 +2,103 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Geo404/709 Amanda Witbeck</title>
+<title>Amanda Witbeck </title>
 
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />    
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+        
+     body {  
+         background: #f5f5f5;   
+         font-family: 'Oswald', sans-serif;
+        }
+    header { 
+            width: 100%;
+            min-width: 800px;
+            margin: 0 auto;
+            background: #36454F;
+            padding: 15px 0 20px;
+        }
+    h1 { 
+       font-family: 'Oswald', sans-serif;
+        font-weight: 800;
+        letter-spacing: 13pt;
+        width: 80%;
+        margin: 0 auto;
+        color: #C2FFD6;
+    }
+    h2 { 
+        font-family: 'Oswald', sans-serif;
+        font-weight: 100;
+        letter-spacing: 2pt;
+        width: 80%;
+        margin: 0 auto;
+        color: #FCC200;
+    }
+        h3 {
+        font-family: 'Oswald', sans-serif;
+        color: #36454F;
+    }
+    p { 
+        font-size: .9em; 
+        color: #36454F; 
+    }
+    ul {
+        list-style-type: none; 
+        font-size: .9em; 
+        color: #375671; 
+        line-height: 1.6em;
+    }
+    a, a:visited {   
+        color: #36454F;
+    }
+        .project {
+        width: 80%;
+        min-width: 800px;
+        height: 100%;
+        margin: 35px auto;
+    }
+    .project:after {
+        content: "";
+        display: table;
+        clear: both; 
+    }
+    .project-image {
+        width: 388px;
+        height: 240px;
+        background: white;
+        float: left;
+        margin-right: 20px;
+        border: 2px solid #dddddd;
+    }
+    </style>
 
-<style>
-    
-/* CSS style rules go here! */   
 
-</style>
 </head>
 
 <body>
+    
+    <header>
+    <h1>AMANDA WITBECK</h1>
+        <h2> Web Mapping at the University of Kentucky</h2>
+    </header>
 
-    <p>Hello World! I'm going to be a portfolio page.</p>
+    
+        <section class = "project">
+            
+        <a target="_blank" href="ky-unemployment/"><image src="images/KyUnemploymentRates.jpg" alt="KY Unemployment Map" class="project-image" /></a>
+        <h3><a target="_blank" href="KY-unemployment/">KY Unemployment Rates: 2001 &ndash; 2013</a></h3>
+        <p>This choropleth map shows unemployment rates in the Commonwealth of Kentucky by county for years ranging between 2001 and 2013.</p>
+        <p>The data is loaded dynamically with an AJAX request, and classifications are calculated at run-time within the client. The map uses an HTML5 range slider used to sequence through the years and update the map.</p>
+        <ul> 
+            <li>See the map: <a href="#">KY Unemployment Rates: 2001 &ndash; 2013</a></li>
+            <li>Data Source: <a href="http://www.bls.gov/data/">Bureau of Labor Statistics</a></li>
+            <li>See the <a href="https://github.com/newmapsplus/geo409/tree/master/map-04">code for this map hosted on GitHub</a></li>
+        </ul>
+            
+    </section>
+    
     
 </body>
 </html>
