@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Amanda Witbeck </title>
+
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />    
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+        
+     body {  
+         background: #f5f5f5;   
+         font-family: 'Oswald', sans-serif;
+        }
+    header { 
+            width: 100%;
+            min-width: 800px;
+            margin: 0 auto;
+            background: #36454F;
+            padding: 15px 0 20px;
+        }
+    h1 { 
+       font-family: 'Oswald', sans-serif;
+        font-weight: 800;
+        letter-spacing: 13pt;
+        width: 80%;
+        margin: 0 auto;
+        color: #C2FFD6;
+    }
+    h2 { 
+        font-family: 'Oswald', sans-serif;
+        font-weight: 100;
+        letter-spacing: 2pt;
+        width: 80%;
+        margin: 0 auto;
+        color: #FCC200;
+    }
+        h3 {
+        font-family: 'Oswald', sans-serif;
+        color: #36454F;
+    }
+    p { 
+        font-size: .9em; 
+        color: #36454F; 
+    }
+    ul {
+        list-style-type: none; 
+        font-size: .9em; 
+        color: #375671; 
+        line-height: 1.6em;
+    }
+    a, a:visited {   
+        color: #36454F;
+    }
+        .project {
+        width: 80%;
+        min-width: 800px;
+        height: 100%;
+        margin: 35px auto;
+    }
+    .project:after {
+        content: "";
+        display: table;
+        clear: both; 
+    }
+    .project-image {
+        width: 388px;
+        height: 240px;
+        background: white;
+        float: left;
+        margin-right: 20px;
+        border: 2px solid #dddddd;
+    }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <header>
+    <h1>AMANDA WITBECK</h1>
+        <h2> Web Mapping at the University of Kentucky</h2>
+    </header>
+
+    
+    
+<!--    US Power Generation-->
+      <section class = "project">
+            
+        <a target="_blank" href="ElectricPowerGeneration/"><image src="images/ElectricPowerGeneration.jpg" alt="Electric Power Generation" class="project-image"/></a>
+        <h3><a target="_blank" href="ElectricPowerGeneration/">US Electric Power Generation</a></h3>
+        <p>This point map shows Power Plant Locations in the United States and compares wind, hydro, and coal plant sites.</p>
+        <ul> 
+            <li>See the map: <a href="#">Electric Power Generation</a></li>
+            <li>See the <a href="https://github.com/newmapsplus/geo409/tree/master/map-04">code for this map hosted on GitHub</a></li>
+        </ul>
+            
+    </section>
+    
+    <!--    KY Unemployment-->
+        <section class = "project">
+            
+        <a target="_blank" href="ky-unemployment/"><image src="images/KyUnemploymentRates.jpg" alt="KY Unemployment Map" class="project-image" /></a>
+        <h3><a target="_blank" href="KY-unemployment/">KY Unemployment Rates: 2001 &ndash; 2013</a></h3>
+        <p>This choropleth map shows unemployment rates in the Commonwealth of Kentucky by county for years ranging between 2001 and 2013.</p>
+        <p>The data is loaded dynamically with an AJAX request, and classifications are calculated at run-time within the client. The map uses an HTML5 range slider used to sequence through the years and update the map.</p>
+        <ul> 
+            <li>See the map: <a href="#">KY Unemployment Rates: 2001 &ndash; 2013</a></li>
+            <li>Data Source: <a href="http://www.bls.gov/data/">Bureau of Labor Statistics</a></li>
+            <li>See the <a href="https://github.com/newmapsplus/geo409/tree/master/map-04">code for this map hosted on GitHub</a></li>
+        </ul>
+            
+    </section>
+    
+    <!--    Final Project-->
+      <section class = "project">
+            
+        <a target="_blank" href="KyKicksAss/"><image src="images/kykicksass.jpg" alt="Kentucky Kicks Ass" class="project-image" /></a>
+        <h3><a target="_blank" href="KyKicksAss/">All Things Kentucky</a></h3>
+        <p>This chloropleth map compares geotagged twitter data containing: Bourbon, Kentucky, Bluegrass, Kentucky Derby, Hillbilly, Kentucky Fried Chicken, BBN, Kentucky Colonel, Kentucky Kicks Ass, Unbridled Spirit, and Kentucky for Kentucky using hexagon, county, and state polygons.         </p>
+        <ul> 
+            <li>See the map: <a href="#">All Things Kentucky</a></li>
+            <li>Data Source: <a href="http://www.floatingsheep.org/p/dolly.html">Twiiter Data</a></li>
+            <li>See the <a href="https://github.com/AmandaWitbeck/AmandaWitbeck.github.io">code for this map hosted on GitHub</a></li>
+        </ul>
+            
+    </section>
+    
+    
+<!--    KY Power Plants-->
+      <section class = "project">
+            
+        <a target="_blank" href="PowerPlants/"><image src="images/PowerPlants.jpg" alt="KY Power Plants" class="project-image"/></a>
+        <h3><a target="_blank" href="PowerPlants/">KY Power Plants</a></h3>
+          <p>This proportional symbol map shows power plants generated by one particular fuel source with less than 500 megawatts capacity, within 400 km of Lexington, KY</p> 
+            <li>See the map: <a href="#">KY Power Plants</a></li>
+            <li>See the <a href="https://github.com/newmapsplus/geo409/tree/master/map-04">code for this map hosted on GitHub</a></li>
+        </ul>
+            
+    </section>
+    
+    
+    
+    
+    
+</body>
+</html>
