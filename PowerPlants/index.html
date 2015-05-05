@@ -3,7 +3,7 @@
 
 <head>
     <meta charset=utf-8 />
-    <title>Geo409 Map 02</title>
+    <title>Power Plants</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
@@ -73,13 +73,13 @@
             center: [38.0297, -84.4947],
             zoom: 5,
         });
-       var tiles = L.tileLayer('http://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+       
+        var tiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', 
+            {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
             subdomains: 'abcd',
             minZoom: 0,
             maxZoom: 18
-});
-
+        });
         
         map.addLayer(tiles);
         
@@ -99,8 +99,8 @@
             pointToLayer: function(features, latlng) {
                 return L.circleMarker(latlng, {
                     fillOpacity: 0.8,
-                    fillColor: 'red', 
-                    color: 'red',
+                    fillColor: 'orange', 
+                    color: 'orange',
                     weight: 1,
                     radius: getRadius(features.properties.capacity)
                 })
@@ -145,7 +145,7 @@
                 });
                 layer.on('mouseout', function() {
                     layer.setStyle({
-                        fillColor: 'blue'
+                        fillColor: 'teal'
                     });
                 });
             },
