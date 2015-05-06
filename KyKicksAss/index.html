@@ -196,7 +196,7 @@
     <script>
         // initial map options, disabling pan/zoom
         var options = {
-            center: [38.2, -88],
+            center: [39.5, -98.35],
             zoom: 5,
             minZoom: 4,
             maxZoom: 7,
@@ -253,9 +253,11 @@
                     //draws and styles the polygons 
                     return {
                         fillColor: 'white',
-                        weight: .7,
+                        weight: 1,
                         fillOpacity: 1,
-                        stroke: "black",
+                        stroke: true,
+                        color: "#084594"
+                        //REMOVED COMMA ABOVE
 
                     };
                 }
@@ -271,7 +273,9 @@
                         return {
                             fillColor: 'white',
                             weight: 2,
-                            fillOpacity: .8,
+                            fillOpacity: 1,
+                            color: "#084594"
+                    //REMOVED COMMA ABOVE
                             
 
                         };
@@ -289,7 +293,9 @@
                             return {
                                 fillColor: 'white',
                                 weight: .7,
-                                fillOpacity: 1,
+                                fillOpacity: 1
+                                
+                        //REMOVED COMMA ABOVE
 
 
                             };
@@ -350,6 +356,7 @@
                     layer.setStyle({
                         fill: true,
                         stroke: true,
+                        stroke: "#084594",
                         fillColor: getColor(layer.feature.properties[attribute] /
                             layer.feature.properties[norm], breaks)
                         
@@ -365,6 +372,7 @@
                     layer.setStyle({
                         fill: true, 
                         stroke: true,
+                        stroke: "#084594",
                         fillColor: 'gray',
                         
                      }); 
@@ -418,7 +426,7 @@
 
                     // reset the layer style to its original stroke color
                     layer.setStyle({
-                        color: 'blue',
+                        color: '#084594',
                     });
                 });
             });
@@ -476,15 +484,15 @@
             // which color value to return to return to the function caller
 
             if (d <= breaks[1]) {
-                return '#a1d99b';
+                return '#c6dbef';
             } else if (d <= breaks[2]) {
-                return '#74c476';
+                return '#9ecae1';
             } else if (d <= breaks[3]) {
-                return '#41ab5d';
+                return '#6baed6';
             } else if (d <= breaks[4]) {
-                return '#238b45'
+                return '#3182bd'
             } else if (d <= breaks[5]) {
-                return '#005a32'
+                return '#08519c'
             } 
         }
 
