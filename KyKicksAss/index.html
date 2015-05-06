@@ -253,8 +253,8 @@
                     //draws and styles the polygons 
                     return {
                         fillColor: 'white',
-                        weight: 1,
-                        fillOpacity: 1,
+                        weight: 2,
+                        fillOpacity: 3,
                         stroke: true,
                         color: "#084594"
                         //REMOVED COMMA ABOVE
@@ -272,7 +272,7 @@
                         //draws and styles the polygons 
                         return {
                             fillColor: 'white',
-                            weight: 2,
+                            weight: 1.5,
                             fillOpacity: 1,
                             color: "#084594"
                     //REMOVED COMMA ABOVE
@@ -292,7 +292,7 @@
                             //draws and styles the polygons 
                             return {
                                 fillColor: 'white',
-                                weight: .7,
+                                weight: 2,
                                 fillOpacity: 1
                                 
                         //REMOVED COMMA ABOVE
@@ -417,7 +417,8 @@
 
                     // change the stroke color and bring that element to the front
                     layer.setStyle({
-                        color: 'yellow'
+                        color: 'yellow',
+                        weight: 5,
                     }).bringToFront();
                 });
 
@@ -427,6 +428,7 @@
                     // reset the layer style to its original stroke color
                     layer.setStyle({
                         color: '#084594',
+                        weight: 2,
                     });
                 });
             });
