@@ -40,8 +40,14 @@
         }
         
         h2 {
-            display: inline-block;
-            color: #001323;
+            position: absolute;
+            z-index: 100;
+            top: 10px;
+            left: 50px;
+            padding: px 15px;
+            margin: 0;
+            border-radius: 5px;
+            opacity:0.7;
         }
         
         #map {
@@ -156,14 +162,18 @@
             left: 50%;
             margin: -33px 0 0 -33px;
         }
+          .logo {
+            width: 175px;
+            height: 100px;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>All Things Kentucky</h1>
-        <h2></h2>
+<!--        <h1>All Things Kentucky</h1>-->
+        <h2><image src ="kyforkylogo_color.jpg" alt="LOGO" class='logo'></image></h2>
     </header>
     <div id='ui-controls'>
         <label>Choose a data attribute:
