@@ -283,7 +283,7 @@
                         return {
                             fillColor: 'white',
                             weight: 1.5,
-                            fillOpacity: 1,
+                            fillOpacity: 0.9,
                             color: "#084594"
                     //REMOVED COMMA ABOVE
                             
@@ -303,7 +303,7 @@
                             return {
                                 fillColor: 'white',
                                 weight: 2,
-                                fillOpacity: 1,
+                                fillOpacity: 0.9,
                                 color: "#084594"
                                 
                         //REMOVED COMMA ABOVE
@@ -385,6 +385,7 @@
                         stroke: true,
                         stroke: "#084594",
                         fillColor: 'gray',
+                        Opacity: 0.5,
                         
                      }); 
                     
@@ -408,11 +409,11 @@
                 
                 //create conditional statements to customize popups for each layer
                 if (activeLayer == hexbinLayer) {
-                  layer.bindPopup(labels[attribute]  +" tweets from this hexagon"+ " : " + ((layer.feature.properties[attribute])).toLocaleString());
+                  layer.bindPopup(labels[attribute]  +" tweets from this hexagon"+ ": " + ((layer.feature.properties[attribute])).toLocaleString());
                 } else if(activeLayer == countyLayer) {
-                    layer.bindPopup(labels[attribute] + " tweets from " + layer.feature.properties["NAME"] + " County : " + ((layer.feature.properties[attribute])).toLocaleString());
+                    layer.bindPopup(labels[attribute] + " tweets from " + layer.feature.properties["NAME"] + " County: " + ((layer.feature.properties[attribute])).toLocaleString());
                 } else  {
-                    layer.bindPopup(labels[attribute] + " tweets from " + layer.feature.properties["NAME"] + " : " + ((layer.feature.properties[attribute])).toLocaleString());
+                    layer.bindPopup(labels[attribute] + " tweets from " + layer.feature.properties["NAME"] + ": " + ((layer.feature.properties[attribute])).toLocaleString());
                 }
                 
 
