@@ -79,7 +79,11 @@
             color: whitesmoke;
         }
         .year-slider {
+            z-index: 100;
+            top: 50px;
+            left: 100px;
             width: 100%;
+            left: 100px;
         }
         #ui-controls .min {
             float: left;   
@@ -129,6 +133,7 @@
     </label>
      </div>
 
+<!--
     <div id = 'ui-controls'>
         <label> Choose year: <br>
         <select> name = "unemployment">
@@ -148,6 +153,7 @@
         </select>
         </label>
     </div>
+-->
     
     <div id='map'></div>
     
@@ -191,7 +197,7 @@
                
              
                 dataLayer = L.geoJson(counties, {
-                    style: function(feature) {
+                    style: function(features) {
                     return{
                         color: 'black', 
                         weight: 2,
@@ -417,6 +423,60 @@
     }
     // add the control object containing our slider element to the map
     sliderControl.addTo(map);
+        
+        
+                function updateInfo(layer) {
+            //create 'shortcut' variable to layer properties
+            var props = layer.feature.properties;
+            
+            //create info box HTML content, establishing a header...
+            var header = '<h3>' + props["NAME"] + ' County (% Unemployment 2000-2013)</h3>';
+            $(".info").html(header);
+            
+//            //Set size variables
+//            var m = {top: 10, right: 20, bottom: 20, left: 30},
+//            w = 400 - m.left - m.right,
+//            h = 200 - m.top - m.bottom;
+//            
+//            //Y-axis scale method
+//            var y = d3.scale.linear()
+//                .range([h,0]);
+//            
+//            //X-axis scale method
+//            var x = d3.scale.linear()
+//                .range([0, w]);
+//            
+//            //path constructor for line grapht data
+//            var valueLine = d3.svg.line()
+//                .x(function(d) { return x(d.year); })
+//                .y(function(d) { return y(d.unemployment); })
+//                .interpolate("linear");
+//            
+//            //select div of class info and append an svg to contain line graph
+//            var svg = d3.select(".info")
+//                .append("svg")
+//                    .attr("width", w + m.left + m.right)
+//                    .attr("height", h + m.top + m.bottom + 30)
+//                .append("g")
+//                    .attr("transform", "translate(" + m.left + "," + m.top + ")");
+//            
+//            //create empty data variable that will contain annual unemployment data
+//            //for a given feature.
+//            var data = [];
+//            var unemMin = Number.POSITIVE_INFINITY;
+//            var unemMax = Number.NEGATIVE_INFINITY;
+//            
+//            // for each year, add year and unemployment rate as properties of a data
+//            // variable.
+//            for (var i = 2000; i <= 2013; i++) {
+//                data.push({year: i, unemployment: Number(props[String(i)])});
+//                
+//                // locate maximum and minimum unemployment values with which to set
+//                // Y-axis scale domain.
+//                var unemTmp = Number(props[String(i)]);
+//                if (unemTmp < unemMin) unemMin = unemTmp;
+//                if (unemTmp > unemMax) unemMax = unemTmp;
+            }
     </script>
     
 </body>
